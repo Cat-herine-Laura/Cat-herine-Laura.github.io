@@ -357,7 +357,7 @@ hr {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  align-content: stretch;
+  align-content: space-evenly;
   box-sizing: border-box;
 }
 
@@ -367,7 +367,7 @@ hr {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  align-content: stretch;
+  align-content: space-evenly;
   box-sizing: border-box;
 }
 
