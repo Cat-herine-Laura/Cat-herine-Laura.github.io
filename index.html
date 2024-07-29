@@ -20,6 +20,31 @@
       opacity: 1 !important;
       font-weight: 700 !important;
     }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .features, .gallery {
+      padding: 20px;
+      background: #fff;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+
+    .features h2, .gallery h2 {
+      margin-top: 0;
+    }
+
+    .feature-item, .gallery-item {
+      margin-bottom: 20px;
+    }
+
+    .feature-item img, .gallery-item img {
+      width: 100%;
+      border-radius: 8px;
+    }
   </style>
 </head>
 
@@ -47,13 +72,50 @@
     <!-------------------------------------------------------------------------------------------->
     <div class="content">
       <div class="content-table flex-column">
-
-       
-
-
         
-       
-        
+        <div class="container">
+          <section class="features">
+            <h2>Features</h2>
+            <div class="feature-item">
+              <img src="img/line-up.jpg" alt="Centralized Platform">
+              <h3>Centralized Platform</h3>
+              <p>Browse and compare different types of vehicles available for hire, including trucks, vans, and more.</p>
+            </div>
+            <div class="feature-item">
+              <img src="img/phone.png" alt="Real-Time Availability">
+              <h3>Real-Time Availability</h3>
+              <p>Check the real-time availability of vehicles in your vicinity to ensure prompt access when needed.</p>
+            </div>
+            <div class="feature-item">
+              <img src="img/tracking.jpg" alt="Transparent Pricing">
+              <h3>Transparent Pricing</h3>
+              <p>Compare rates and choose the most cost-effective option based on your needs and budget.</p>
+            </div>
+          </section>
+      
+          <section class="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-item">
+              <img src="img/back.jpg" alt="Vehicle 1">
+              <p>Vehicle 1</p>
+            </div>
+            <div class="gallery-item">
+              <img src="img/truc-kun.jpeg" alt="Vehicle 2">
+              <p>Vehicle 2</p>
+            </div>
+            <div class="gallery-item">
+              <img src="img/tyre.jpeg" alt="Vehicle 3">
+              <p>Vehicle 3</p>
+            </div>
+          </section>
+        </div>
+        <p class = "text">
+          The primary challenge this logistics application aims to address is the inefficiency and inconvenience faced by individuals in urban centers when seeking suitable vehicles for relocating or transporting heavy items. 
+          Currently, users must navigate a fragmented system of local listings and contact individual vehicle owners or rental services, which can lead to delays, increased costs, and logistical stress. The decentralized nature 
+          of vehicle rental services exacerbates these issues, making it difficult for users to quickly and reliably find transportation options that meet their needs, especially during peak periods or urgent situations
+        </p>      
+
+
         
         <!--Start Credits-->
         <div class="flex-row">

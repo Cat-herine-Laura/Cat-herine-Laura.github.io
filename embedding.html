@@ -57,7 +57,10 @@
       background-color: #f9f9f9; /* Background color for text area */
       border-top: 1px solid #ddd; /* Border to separate image from text */
     }
-
+    h1 {
+        text-align: center;
+        color: #333;
+        }
     .text strong {
       display: block;
       font-weight: bold;
@@ -69,8 +72,24 @@
         grid-template-columns: repeat(2, 1fr); 
       }
     }
-
+    .container {
+      width: 80%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      opacity: 0; /* Start with invisible */
+      transform: translateY(20px); /* Start with offset */
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+    }
     
+    .container.show {
+      opacity: 1; /* Fade in */
+      transform: translateY(0); /* Move up */
+    }
+
     .bottom-row {
       display: flex;
       justify-content: center; 
@@ -117,7 +136,7 @@
     </div>
     <div class="custom-survey">
       <div class="painting-frame-item">
-        <img id="vision-image" class="painting-frame-image" src="img/FISH.jpg" alt="Katende Ronnie Magala">
+        <img id="vision-image" class="painting-frame-image" src="img/ronnie.jpeg" alt="Katende Ronnie Magala">
       </div>
       <div class="text">
         <strong>Katende Ronnie Magala</strong><br>
@@ -145,14 +164,47 @@
       </div>
     </div>
   </div>
-  <p class="text">
-    <h3>Meet our team</h3><br>
-    The team is made of five commited members who brought the project to life.  
-    Our team is a powerhouse of talent, passion, and expertise.
 
+  <p class="container"> 
+    <h3>Make moving goods as fast as snapping your fingers.</h3><br>     
+    By developing a dedicated mobile application, 
+    the team aims to create a centralized platform that simplifies the process of finding suitable 
+    vehicles for hire. This focus on enhancing the user experience.
+    We dedicated ourselves to making transportation services more accessible and efficient for individuals 
+    from their localities.
   </p>
 
-  <div class="footer-container"></div>
+  <div class="banner">
+    <div class="banner-table flex-row">
+      <div class="flex-row">
+        <div class="flex-item-stretch">
+          <h2>LOGITRUST</h2>
+          <p>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a><br>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a><br>
+            <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+            Copyright © 2024 - Logitrust
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.querySelector('.container');
+
+      function handleScroll() {
+        const containerPosition = container.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
+
+        if (containerPosition < screenPosition) {
+          container.classList.add('show');
+        }
+      }
+
+      window.addEventListener('scroll', handleScroll);
+    });
+  </script>
 </body>
 
 </html>

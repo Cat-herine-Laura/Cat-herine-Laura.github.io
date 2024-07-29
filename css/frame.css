@@ -297,7 +297,7 @@ hr {
   font-weight: 300;
   line-height: 1.5;
   overflow-x: auto;
-  background-color: #005cbf;
+  background-color: #01010a;
   display: flex;
 }
 
@@ -305,16 +305,18 @@ hr {
   padding: 0;
   width: 100%;
   margin: 0 auto;
-  align-self: flex-end;
+  align-self: center;
 }
 
 .banner .banner-table a {
   color: #a3cfff;
   text-decoration: none;
+  align-self: center;
 }
 
 .banner .banner-table a:hover {
   text-decoration: underline;
+  align-self: center;
 }
 
 .banner h1,
@@ -329,6 +331,7 @@ hr {
   max-width: 900px;
   margin: 20px auto;
   padding: 0 30px;
+  align-self: center;
 }
 
 .flex-column {
