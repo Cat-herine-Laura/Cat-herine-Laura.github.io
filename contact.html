@@ -20,48 +20,180 @@
       opacity: 1 !important;
       font-weight: 700 !important;
     }
+    .container {
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    .box {
+      padding: 20px;
+      margin: 20px 0;
+      background-color: #f4f4f4;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background: #e9ecef;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    .hero-text {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    .feature {
+      text-align: center;
+      max-width: 200px;
+    }
+    .products {
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    .product-grid {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+    }
+    .product {
+      max-width: 200px;
+      text-align: center;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      color: #fff;
+      background: #007bff;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .button:hover {
+      background: #0056b3;
+    }
   </style>
 </head>
 
 <body>
   <div class="menu-container"></div>
   <div class="content-container">
+    <!--Start Header-->
+    <div class="banner" style="background: url('img/dummy-background.jpg') no-repeat center; background-size: cover; height: 300px;"></div>
+    <div class="banner">
+      <div class="banner-table flex-column">
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 class="add-top-margin-small">Welcome to LOGITRUST.</h2>
+            <p class="text">
+              When it comes to urban logistics and transportation of heavy items, we understand the challenges individuals face in finding suitable vehicles for hire. Our platform aims to solve this by providing a centralized solution to connect users with available transportation options.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Header-->
     <div class="content">
       <div class="content-table flex-column">
         <div class="flex-row-space-between">
           <div class="flex-item flex-column">
             <div class="container">
               <div class="box">
-                  <h2>Vehicle Rental Search</h2>
-                  <p>Using our platform, you can conduct comprehensive searches for vehicle rentals tailored to your requirements. Find the perfect transportation solution for your urban logistics needs with ease.</p>
-                  <a href="#" class="contact">Contact</a>
+                <h2>Vehicle Rental Search</h2>
+                <p>Using our platform, you can conduct comprehensive searches for vehicle rentals tailored to your requirements. Find the perfect transportation solution for your urban logistics needs with ease.</p>
+                <a href="#" class="contact">Contact</a>
               </div>
               <div class="box">
-                  <h2>Expert Guidance</h2>
-                  <p>Our experienced team offers personalized guidance throughout the process, from selecting the right vehicle to completing the transaction. Trust LOGITRUST for a smooth and efficient logistics experience.</p>
-                  <a href="#" class="contact">Contact</a>
+                <h2>Expert Guidance</h2>
+                <p>Our experienced team offers personalized guidance throughout the process, from selecting the right vehicle to completing the transaction. Trust LOGITRUST for a smooth and efficient logistics experience.</p>
+                <a href="#" class="contact">Contact</a>
               </div>
               <div class="box">
-                  <h2>Transportation Solutions</h2>
-                  <p>At LOGITRUST, we provide expert transportation solutions and accurate assessments to meet your logistics needs. Let us guide you through the process of finding the ideal vehicle for your urban transportation requirements.</p>
-                  <a href="#" class="contact">Contact</a>
+                <h2>Transportation Solutions</h2>
+                <p>At LOGITRUST, we provide expert transportation solutions and accurate assessments to meet your logistics needs. Let us guide you through the process of finding the ideal vehicle for your urban transportation requirements.</p>
+                <a href="#" class="contact">Contact</a>
               </div>
-          </div>
+            </div>
             <hr>
-            
-            </p>
+            <section class="hero">
+              <div class="hero-text">
+                <h2>Transport your goods</h2>
+                <a href="#" class="button">Order Now</a>
+                <a href="widgets.html" class="button">Learn More</a>
+              </div>
+            </section>
+
+            <section class="features">
+              <div class="feature">
+                <i class="icon">🚚</i>
+                <p>Fast Shipping on all orders </p>
+              </div>
+              <div class="feature">
+                <i class="icon">📞</i>
+                <p>Call Us Anytime <br> +1 234 567 8901</p>
+              </div>
+              <div class="feature">
+                <i class="icon">📍</i>
+                <p>Our Location <br> Makerere University, Kampala, Uganda</p>
+              </div>
+            </section>
+
+            <section class="products">
+              <h2>We have a variety of cars to suit your needs</h2>
+              <div class="product-grid">
+                <div class="product">
+                  <img src="img/truc-kun.jpeg" alt="Pickup cars">
+                  <p>Pickup cars</p>
+                </div>
+                <div class="product">
+                  <img src="img/Isuzu-NLR-(1-of-3).jpg" alt="Medium size cars">
+                  <p>Medium size cars</p>
+                </div>
+                <div class="product">
+                  <img src="img/truck-kun.jpg" alt="Little Black Shirt">
+                  <p>Large Cars</p>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
         <p class="text">
-            Make moving goods as fast as snapping your fingers.
-          </p>
-          <p class="text">
-            Moving goods is just one click away.
+          Make moving goods as fast as snapping your fingers.
+        </p>
+        <p class="text">
+          Moving goods is just one click away.
+        </p>
       </div>
     </div>
-    
   </div>
-  <div class="footer-container"></div>
+  <div class="banner">
+    <div class="banner-table flex-row">
+      <div class="flex-row">
+        <div class="flex-item-stretch">
+          <h2>LOGITRUST</h2>
+          <p>
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a><br>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a><br>
+            <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+            Copyright © 2024 - Logitrust
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
