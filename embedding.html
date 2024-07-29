@@ -57,10 +57,12 @@
       background-color: #f9f9f9; /* Background color for text area */
       border-top: 1px solid #ddd; /* Border to separate image from text */
     }
+    
     h1 {
-        text-align: center;
-        color: #333;
-        }
+      text-align: center;
+      color: #333;
+    }
+
     .text strong {
       display: block;
       font-weight: bold;
@@ -72,6 +74,7 @@
         grid-template-columns: repeat(2, 1fr); 
       }
     }
+    
     .container {
       width: 80%;
       max-width: 800px;
@@ -82,7 +85,7 @@
       border-radius: 8px;
       opacity: 0; /* Start with invisible */
       transform: translateY(20px); /* Start with offset */
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
     }
     
     .container.show {
@@ -99,6 +102,10 @@
 
     .bottom-row .custom-survey {
       flex: 0 0 auto; /* Prevent stretching */
+    }
+
+    .center-text {
+      text-align: center; /* Center the text */
     }
   </style>
 </head>
@@ -164,15 +171,17 @@
       </div>
     </div>
   </div>
-
-  <p class="container"> 
-    <h3>Make moving goods as fast as snapping your fingers.</h3><br>     
-    By developing a dedicated mobile application, 
-    the team aims to create a centralized platform that simplifies the process of finding suitable 
-    vehicles for hire. This focus on enhancing the user experience.
-    We dedicated ourselves to making transportation services more accessible and efficient for individuals 
-    from their localities.
-  </p>
+     
+  
+  <div class="container"> 
+    <p>By developing a dedicated mobile application, 
+      the team aims to create a centralized platform that simplifies the process of finding suitable 
+      vehicles for hire. This focus on enhancing the user experience.
+      We dedicated ourselves to making transportation services more accessible and efficient for individuals 
+      from their localities.
+    </p>
+  </div>
+  <h3 class="center-text">Make moving goods as fast as snapping your fingers.</h3>
 
   <div class="banner">
     <div class="banner-table flex-row">

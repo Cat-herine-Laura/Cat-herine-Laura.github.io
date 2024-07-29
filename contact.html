@@ -1,183 +1,239 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
-  <title>LOGISTICS PROJECT</title>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGITRUST</title>
   <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <script src="js/menu.js"></script>
-  <script src="js/footer.js"></script>
   <style>
-    .menu-index {
-      color: rgb(255, 255, 255) !important;
+    .menu-embedding {
+      color: rgb(248, 245, 245) !important;
       opacity: 1 !important;
       font-weight: 700 !important;
     }
-    .container {
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .container, .new-section, .registration-section {
+      display: flex;
+      width: 80%;
+      max-width: 1200px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
       width: 100%;
-      margin: 0 auto;
-      padding: 20px;
-      background: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
     }
-    .box {
-      padding: 20px;
-      margin: 20px 0;
-      background-color: #f4f4f4;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .hero {
-      text-align: center;
-      padding: 40px 20px;
-      background: #e9ecef;
-      border-radius: 8px;
-      margin: 20px 0;
-    }
-    .hero-text {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .features {
-      display: flex;
-      justify-content: space-around;
-      padding: 20px;
-      background: #f8f9fa;
-      border-radius: 8px;
-      margin: 20px 0;
-    }
-    .feature {
-      text-align: center;
-      max-width: 200px;
-    }
-    .products {
-      padding: 20px;
-      background: #f8f9fa;
-      border-radius: 8px;
-      margin: 20px 0;
-    }
-    .product-grid {
-      display: flex;
-      justify-content: space-around;
-      gap: 20px;
-    }
-    .product {
-      max-width: 200px;
-      text-align: center;
-    }
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 10px;
+
+    .text-section {
+      flex: 1;
+      padding: 40px;
+      background-color: #000;
       color: #fff;
-      background: #007bff;
-      border-radius: 8px;
-      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
     }
-    .button:hover {
-      background: #0056b3;
+
+    .text-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .text-section p {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+
+    .text-section form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .text-section form input {
+      padding: 15px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .text-section form input[type="text"] {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .text-section form button {
+      padding: 15px;
+      background-color: #1c1c1c;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .text-section form button:hover {
+      background-color: #333;
+    }
+
+    .image-section {
+      flex: 1;
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+    }
+
+    .new-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .new-section-content {
+      flex: 1;
+      padding: 0 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .new-section h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .new-section p {
+      margin-bottom: 20px;
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .new-section a {
+      display: inline-block;
+      margin-right: 20px;
+      padding: 15px 25px;
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .new-section a:hover {
+      background-color: #333;
+    }
+
+    .new-section a:last-child {
+      background-color: transparent;
+      color: #000;
+    }
+
+    .new-section a:last-child:hover {
+      text-decoration: underline;
+    }
+
+    .registration-section {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .registration-section h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .registration-section p {
+      margin-bottom: 20px;
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .registration-section a {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 25px;
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .registration-section a:hover {
+      background-color: #333;
+    }
+
+    .registration-section a:last-child {
+      background-color: transparent;
+      color: #000;
+    }
+
+    .registration-section a:last-child:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
   <div class="menu-container"></div>
-  <div class="content-container">
-    <!--Start Header-->
-    <div class="banner" style="background: url('img/dummy-background.jpg') no-repeat center; background-size: cover; height: 300px;"></div>
-    <div class="banner">
-      <div class="banner-table flex-column">
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 class="add-top-margin-small">Welcome to LOGITRUST.</h2>
-            <p class="text">
-              When it comes to urban logistics and transportation of heavy items, we understand the challenges individuals face in finding suitable vehicles for hire. Our platform aims to solve this by providing a centralized solution to connect users with available transportation options.
-            </p>
-          </div>
-        </div>
+  
+  <div class="container">
+    <div class="section">
+      <div class="text-section">
+        <h1>Transport anywhere with Our Service</h1>
+        <p>Request a driver and negotiate.</p>
+        <form>
+          <input type="text" placeholder="Enter location">
+          <input type="text" placeholder="Enter destination">
+          <button type="button">Get a driver</button>
+        </form>
+      </div>
+      <div class="image-section" style="background-image: url('img/transport.jpg');"></div>
+    </div>
+  </div>
+
+  <div class="new-section">
+    <div class="section">
+      <div class="image-section" style="background-image: url('img/DRIVER.jpg');"></div>
+      <div class="text-section new-section-content">
+        <h1>Drive when you want, make what you need</h1>
+        <p>Make money on your schedule with deliveries.
+           You can use your own car or choose a rental through our service.</p>
+        <a href="#">Get started</a>
+        <a href="#">Already have an account? Sign in</a>
       </div>
     </div>
-    <!--End Header-->
-    <div class="content">
-      <div class="content-table flex-column">
-        <div class="flex-row-space-between">
-          <div class="flex-item flex-column">
-            <div class="container">
-              <div class="box">
-                <h2>Vehicle Rental Search</h2>
-                <p>Using our platform, you can conduct comprehensive searches for vehicle rentals tailored to your requirements. Find the perfect transportation solution for your urban logistics needs with ease.</p>
-                <a href="#" class="contact">Contact</a>
-              </div>
-              <div class="box">
-                <h2>Expert Guidance</h2>
-                <p>Our experienced team offers personalized guidance throughout the process, from selecting the right vehicle to completing the transaction. Trust LOGITRUST for a smooth and efficient logistics experience.</p>
-                <a href="#" class="contact">Contact</a>
-              </div>
-              <div class="box">
-                <h2>Transportation Solutions</h2>
-                <p>At LOGITRUST, we provide expert transportation solutions and accurate assessments to meet your logistics needs. Let us guide you through the process of finding the ideal vehicle for your urban transportation requirements.</p>
-                <a href="#" class="contact">Contact</a>
-              </div>
-            </div>
-            <hr>
-            <section class="hero">
-              <div class="hero-text">
-                <h2>Transport your goods</h2>
-                <a href="#" class="button">Order Now</a>
-                <a href="widgets.html" class="button">Learn More</a>
-              </div>
-            </section>
+  </div>
 
-            <section class="features">
-              <div class="feature">
-                <i class="icon">🚚</i>
-                <p>Fast Shipping on all orders </p>
-              </div>
-              <div class="feature">
-                <i class="icon">📞</i>
-                <p>Call Us Anytime <br> +1 234 567 8901</p>
-              </div>
-              <div class="feature">
-                <i class="icon">📍</i>
-                <p>Our Location <br> Makerere University, Kampala, Uganda</p>
-              </div>
-            </section>
-
-            <section class="products">
-              <h2>We have a variety of cars to suit your needs</h2>
-              <div class="product-grid">
-                <div class="product">
-                  <img src="img/truc-kun.jpeg" alt="Pickup cars">
-                  <p>Pickup cars</p>
-                </div>
-                <div class="product">
-                  <img src="img/Isuzu-NLR-(1-of-3).jpg" alt="Medium size cars">
-                  <p>Medium size cars</p>
-                </div>
-                <div class="product">
-                  <img src="img/truck-kun.jpg" alt="Little Black Shirt">
-                  <p>Large Cars</p>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-        <p class="text">
-          Make moving goods as fast as snapping your fingers.
-        </p>
-        <p class="text">
-          Moving goods is just one click away.
-        </p>
-      </div>
-    </div>
+  <div class="registration-section">
+    <h1>Join Us Today!</h1>
+    <p>Register as a driver or sign in to start making money.</p>
+    <a href="#">Register as a Driver</a>
+    <a href="#">Sign In</a>
   </div>
   <div class="banner">
     <div class="banner-table flex-row">
@@ -194,6 +250,7 @@
       </div>
     </div>
   </div>
+  </body>
 </body>
 
 </html>
