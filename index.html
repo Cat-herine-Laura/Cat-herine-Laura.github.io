@@ -6,228 +6,298 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="img/logo.png">
   <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/menu.js"></script>
-  <script src="js/footer.js"></script>
+
   <title>LOGISTICS PROJECT</title>
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .menu-index {
-      color: rgb(255, 255, 255) !important;
-      opacity: 1 !important;
-      font-weight: 700 !important;
-    }
-    .header {
-      width: 100%;
-      background-color: #000000;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      box-sizing: border-box;
-    }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .header .contact {
-      text-align: left;
-    }
+.menu-index {
+  color: rgb(255, 255, 255) !important;
+  opacity: 1 !important;
+  font-weight: 700 !important;
+}
 
-    .header .contact p {
-      margin: 5px 0;
-    }
+.menu {
+  width: 100%;
+  background-color: #3a3939;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .header .main-content {
-      text-align: center;
-    }
+.menu .logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
-    .header .main-content h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
+.menu .menu-button {
+  display: none; /* Hide the menu button by default */
+}
 
-    .header .main-content img {
-      width: 150px;
-      margin-top: 20px;
-    }
+.menu .menu-items {
+  display: flex;
+  gap: 20px;
+}
 
-    .info-section {
-      width: 100%;
-    }
+.menu .menu-items a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+}
 
-    .info-section .yellow-section {
-      background-color: #f7f7f7;
-      color: #000;
-      padding: 40px 20px;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+.menu .dropdown {
+  position: relative;
+}
 
-    .info-section .yellow-section img {
-      max-width: 100%;
-      height: auto;
-      flex: 1 1 300px;
-    }
+.menu .dropbtn {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
 
-    .info-section .yellow-section .text-content {
-      flex: 1 1 300px;
-      padding: 20px;
-    }
+.menu .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+}
 
-    .info-section .yellow-section .text-content h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
+.menu .dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
-    .info-section .yellow-section .text-content p {
-      font-size: 1rem;
-      margin-bottom: 20px;
-    }
+.menu .dropdown-content a:hover {
+  background-color: #575757;
+}
 
-    .info-section .dark-section {
-      background-color: #333;
-      color: #fff;
-      padding: 40px 20px;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+.menu .dropdown:hover .dropdown-content {
+  display: block;
+}
 
-    .info-section .dark-section .text-content {
-      flex: 1 1 300px;
-      padding: 20px;
-    }
+/* Media Queries */
 
-    .info-section .dark-section .text-content h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
+@media (max-width: 768px) {
+  .menu .menu-items {
+    display: none; /* Hide menu items on small screens */
+  }
 
-    .info-section .dark-section .text-content p {
-      font-size: 1rem;
-      margin-bottom: 20px;
-    }
+  .menu .menu-button {
+    display: block; /* Show menu button on small screens */
+  }
+}
 
-    .info-section .dark-section .text-content .btn {
-      padding: 10px 20px;
-      background-color: #f36a22;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
+@media (min-width: 769px) {
+  .menu .menu-items {
+    display: flex; /* Show menu items on larger screens */
+  }
 
-    .info-section .dark-section .text-content .btn:hover {
-      background-color: #e05d1e;
-    }
+  .menu .menu-button {
+    display: none; /* Hide menu button on larger screens */
+  }
+}
 
-    .info-section .dark-section img {
-      max-width: 100%;
-      height: auto;
-      flex: 1 1 300px;
-    }
+.info-section {
+  width: 100%;
+}
 
-    .services {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      padding: 40px 20px;
-      box-sizing: border-box;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+.info-section .yellow-section {
+  background-color: #f7f7f7;
+  color: #000;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-    .service {
-      background-color: white;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      padding: 20px;
-      margin: 10px;
-      text-align: center;
-      flex: 1;
-      max-width: 300px;
-    }
+.info-section .yellow-section img {
+  max-width: 100%;
+  height: auto;
+  flex: 1 1 300px;
+}
 
-    .service img {
-      width: 100%;
-      height: auto;
-      border-bottom: 1px solid #f0f0f0;
-      padding-bottom: 20px;
-    }
+.info-section .yellow-section .text-content {
+  flex: 1 1 300px;
+  padding: 20px;
+}
 
-    .service h3 {
-      color: #0e0603;
-      margin-bottom: 10px;
-    }
+.info-section .yellow-section .text-content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
 
-    .service p {
-      font-size: 0.9rem;
-      color: #666;
-    }
+.info-section .yellow-section .text-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
 
-    .banner {
-      width: 100%;
-      height: 100vh;
-      background-color: #000;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      box-sizing: border-box;
-      padding: 20px;
-      text-align: center;
-    }
+.info-section .dark-section {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-    .banner h2 {
-      margin: 0;
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
+.info-section .dark-section .text-content {
+  flex: 1 1 300px;
+  padding: 20px;
+}
 
-    .banner p {
-      margin: 10px 0;
-      font-size: 1.2rem;
-    }
+.info-section .dark-section .text-content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
 
-    .banner a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.2rem;
-    }
+.info-section .dark-section .text-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
 
-    .banner a:hover {
-      text-decoration: underline;
-    }
+.info-section .dark-section .text-content .btn {
+  padding: 10px 20px;
+  background-color: #f36a22;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.info-section .dark-section .text-content .btn:hover {
+  background-color: #e05d1e;
+}
+
+.info-section .dark-section img {
+  max-width: 100%;
+  height: auto;
+  flex: 1 1 300px;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+}
+
+.service img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 20px;
+}
+
+.service h3 {
+  color: #0e0603;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-color: #1f1e1e;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+}
+
+.banner h2 {
+  margin: 0;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.banner a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.banner a:hover {
+  text-decoration: underline;
+}
+
   </style>
 </head>
 
 <body>
-  <div class="header">
-    <div class="contact">
-      <p><strong>Ugnada</strong></p>
-      <p>+256 703688121</p>
-      
-    </div>
-    <div class="main-content">
-      <h1>LOGITRUST</h1>
-      <img src="img/logo.png" alt="Delivery Van">
+  
+  <div class="menu">
+    <div class="menu-table flex-row-space-between">
+      <div class="logo flex-row-center">
+        <a href="index.html">LOGISTICS PROJECT</a>
+      </div>
+      <a class="menu-button" tabindex="0" href="javascript:void(0)">
+        <img src="img/menu.png">
+      </a>
+      <div class="menu-items flex-row-center flex-item">
+        <a class="menu-index" href="index.html">Overview</a>
+        <a class="menu-widget" href="widgets.html">Logitrust</a>
+        <a class="menu-embedding" href="embedding.html">Contributors</a>
+        <div class="dropdown">
+          <a class="dropbtn" href="#">GitHub<i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-content">
+            <a href="https://github.com/CSC-Group14/trust-customers">User Repository</a>
+            <a href="https://github.com/CSC-Group14/driver-app">Drivers Repository</a>          
+          </div>
+        </div>
+        <a href="empty.html">Contact</a>
+      </div>
     </div>
   </div>
 
@@ -235,12 +305,12 @@
     <div class="yellow-section">
       <img src="img/tyre.jpeg" alt="Courier">
       <div class="text-content">
-        <h1>What we believe</h1>
-        <p> The primary challenge this logistics application aims to address is the inefficiency and inconvenience faced by individuals in urban centers when seeking suitable vehicles for relocating or transporting heavy items. 
-          Currently, users must navigate a fragmented system of local listings and contact individual vehicle owners or rental services, which can lead to delays, increased costs, and logistical stress. The decentralized nature 
-          of vehicle rental services exacerbates these issues, making it difficult for users to quickly and reliably find transportation options that meet their needs, especially during peak periods or urgent situations
+        <h1>Purpose</h1>
+        <p> The primary challenge this logistics application aims to address is the inefficiency and inconvenience faced by individuals in urban centers when seeking suitable vehicles for relocating or transporting heavy items.<br> 
+          Currently, users must navigate a fragmented system of local listings and contact individual vehicle owners or rental services, which can lead to delays, increased costs, and logistical stress.<br>
+          The decentralized nature of vehicle rental services exacerbates these issues, making it difficult for users to quickly and reliably find transportation options that meet their needs, especially during peak periods or urgent situations
         </p>      
-        <h3>Real-Time Availability</h3>
+        <h2>Real-Time Availability</h2>
         <p>Check the real-time availability of vehicles in your vicinity to ensure prompt access when needed.</p>
       </div>
     </div>
