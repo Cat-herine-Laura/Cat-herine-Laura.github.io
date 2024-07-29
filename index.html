@@ -25,11 +25,13 @@
       flex-direction: column;
       align-items: center;
     }
+
     .menu-index {
       color: rgb(231, 229, 229) !important;
       opacity: 1 !important;
       font-weight: 700 !important;
     }
+
     .header {
       width: 100%;
       background-color: #000000;
@@ -39,6 +41,7 @@
       align-items: center;
       padding: 20px;
       box-sizing: border-box;
+      animation: fadeIn 2s ease-out;
     }
 
     .header .contact {
@@ -56,11 +59,13 @@
     .header .main-content h1 {
       margin: 0;
       font-size: 2rem;
+      animation: slideInFromLeft 1.5s ease-out;
     }
 
     .header .main-content img {
       width: 150px;
       margin-top: 20px;
+      animation: bounce 2s infinite;
     }
 
     .info-section {
@@ -76,17 +81,20 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
+      animation: fadeIn 2s ease-out;
     }
 
     .info-section .yellow-section img {
       max-width: 100%;
       height: auto;
       flex: 1 1 300px;
+      animation: slideInFromLeft 1.5s ease-out;
     }
 
     .info-section .yellow-section .text-content {
       flex: 1 1 300px;
       padding: 20px;
+      animation: fadeIn 2s ease-out;
     }
 
     .info-section .yellow-section .text-content h1 {
@@ -108,11 +116,13 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      animation: fadeIn 2s ease-out;
     }
 
     .info-section .dark-section .text-content {
       flex: 1 1 300px;
       padding: 20px;
+      animation: slideInFromRight 1.5s ease-out;
     }
 
     .info-section .dark-section .text-content h1 {
@@ -141,6 +151,7 @@
       max-width: 100%;
       height: auto;
       flex: 1 1 300px;
+      animation: slideInFromRight 1.5s ease-out;
     }
 
     .services {
@@ -151,6 +162,7 @@
       box-sizing: border-box;
       flex-wrap: wrap;
       gap: 20px;
+      animation: fadeIn 2s ease-out;
     }
 
     .service {
@@ -162,6 +174,7 @@
       text-align: center;
       flex: 1;
       max-width: 300px;
+      animation: zoomIn 1.5s ease-out;
     }
 
     .service img {
@@ -169,6 +182,7 @@
       height: auto;
       border-bottom: 1px solid #f0f0f0;
       padding-bottom: 20px;
+      animation: pulse 2s infinite;
     }
 
     .service h3 {
@@ -193,6 +207,7 @@
       box-sizing: border-box;
       padding: 20px;
       text-align: center;
+      animation: fadeIn 2s ease-out;
     }
 
     .banner h2 {
@@ -215,6 +230,38 @@
     .banner a:hover {
       text-decoration: underline;
     }
+
+    /* Keyframe animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideInFromLeft {
+      from { transform: translateX(-100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes slideInFromRight {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-30px); }
+      60% { transform: translateY(-15px); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
   </style>
 </head>
 
@@ -235,45 +282,32 @@
           <a class="dropbtn" href="#">GitHub<i class="fas fa-caret-down"></i></a>
           <div class="dropdown-content">
             <a href="https://github.com/CSC-Group14/trust-customers">User Repository</a>
-            <a href="https://github.com/CSC-Group14/driver-app">Drivers Repository</a>          
+            <a href="https://github.com/CSC-Group14/driver-app">Drivers Repository</a>
           </div>
         </div>
         <a href="empty.html">Contact</a>
       </div>
     </div>
   </div>
-  <!-- <div class="header">
-    <div class="contact">
-      <p><strong>Ugnada</strong></p>
-      <p>+256 703688121</p>
-      
-    </div>
-    <div class="main-content">
-      <h1>LOGITRUST</h1>
-      <img src="img/logo.png" alt="Delivery Van">
-    </div>
-  </div> -->
 
   <div class="info-section">
     <div class="yellow-section">
       <img src="img/tyre.jpeg" alt="Courier">
       <div class="text-content">
-        <h1>Purpose</h1>
-        <p> The primary challenge this logistics application aims to address is the inefficiency and inconvenience faced by individuals in urban centers when seeking suitable vehicles for relocating or transporting heavy items.<br> 
-          Currently, users must navigate a fragmented system of local listings and contact individual vehicle owners or rental services, which can lead to delays, increased costs, and logistical stress.<br>
-          The decentralized nature of vehicle rental services exacerbates these issues, making it difficult for users to quickly and reliably find transportation options that meet their needs, especially during peak periods or urgent situations
-        </p>      
-        <h2>Real-Time Availability</h2>
-        <p>Check the real-time availability of vehicles in your vicinity to ensure prompt access when needed.</p>
+        <h1>Welcome to Logitrust</h1>
+        <p>Your trusted partner in logistics solutions. We provide efficient and reliable services tailored to meet 
+          your unique shipping needs. Whether you need to move goods across town or around the globe, we have the expertise and resources to get the job done right<br>
+        </p>
       </div>
     </div>
     <div class="dark-section">
       <div class="text-content">
-        <h1>We Are Available 24/7!</h1>
-        <p>Order Now</p>
-        <a href="widgets.html" class="btn">Order Now</a>
+        <h1>Our Mission</h1>
+        <p>Our mission is to simplify logistics and supply chain management, offering customized solutions that 
+          drive efficiency and success for our clients. We aim to be your go-to partner in navigating the complexities of global logistics."</p>
       </div>
-      <img src="img/dummy-background.jpg" alt="Van">
+      <img src="img/logo.png" alt="Van">
+      <p></p>
     </div>
   </div>
 
