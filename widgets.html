@@ -5,10 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LOGITRUST</title>
+  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/menu.js"></script>
+  <script src="js/footer.js"></script>
   <style>
     .menu-embedding {
       color: rgb(248, 245, 245) !important;
@@ -159,6 +163,7 @@
       justify-content: center;
       padding: 40px;
       text-align: center;
+      width: 100%; /* Ensure full width */
     }
 
     .registration-section h1 {
@@ -193,6 +198,36 @@
     }
 
     .registration-section a:last-child:hover {
+      text-decoration: underline;
+    }
+
+    .banner {
+      width: 100%; /* Ensure full width */
+      background-color: #000;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: relative; /* Ensures footer is positioned correctly */
+      bottom: 0;
+    }
+
+    .banner h2 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .banner p {
+      margin: 10px 0 0;
+      font-size: 1rem;
+    }
+
+    .banner a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .banner a:hover {
       text-decoration: underline;
     }
   </style>
@@ -235,6 +270,8 @@
     <a href="#">Register as a Driver</a>
     <a href="#">Sign In</a>
   </div>
+
+  <!-- Start footer -->
   <div class="banner">
     <div class="banner-table flex-row">
       <div class="flex-row">
@@ -250,7 +287,7 @@
       </div>
     </div>
   </div>
-  </body>
+  <!-- End footer -->
 </body>
 
 </html>
