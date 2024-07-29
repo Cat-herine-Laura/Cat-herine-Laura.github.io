@@ -306,18 +306,18 @@ hr {
   padding: 0;
   width: 100%;
   margin: 0 auto;
-  align-self: center;
+  align-self: flex-end;
 }
 
 .banner .banner-table a {
   color: #a3cfff;
   text-decoration: none;
-  align-self: center;
+  align-self: flex-end;
 }
 
 .banner .banner-table a:hover {
   text-decoration: underline;
-  align-self: center;
+  align-self: flex-end;
 }
 
 .banner h1,
@@ -332,7 +332,7 @@ hr {
   max-width: 900px;
   margin: 20px auto;
   padding: 0 30px;
-  align-self: center;
+  
 }
 
 .flex-column {

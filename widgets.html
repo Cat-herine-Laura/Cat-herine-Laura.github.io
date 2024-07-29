@@ -5,32 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LOGITRUST</title>
-  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="img/logo.png">
   <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/footer.js"></script>
   <style>
-    .menu-embedding {
-      color: rgb(248, 245, 245) !important;
-      opacity: 1 !important;
-      font-weight: 700 !important;
-    }
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       background-color: #f0f0f0;
-      padding: 20px;
     }
 
-    .container, .new-section, .registration-section {
+    .menu-embedding {
+      color: rgb(248, 245, 245) !important;
+      opacity: 1 !important;
+      font-weight: 700 !important;
+    }
+
+    .container {
       display: flex;
       width: 80%;
       max-width: 1200px;
@@ -38,13 +39,12 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
       overflow: hidden;
-      margin-bottom: 40px;
+      margin: 40px 0;
     }
 
     .section {
       display: flex;
       flex-direction: row;
-      align-items: stretch;
       width: 100%;
     }
 
@@ -56,7 +56,6 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      height: 100%;
     }
 
     .text-section h1 {
@@ -104,7 +103,17 @@
       flex: 1;
       background-size: cover;
       background-position: center;
-      height: 100%;
+    }
+
+    .new-section {
+      display: flex;
+      width: 80%;
+      max-width: 1200px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 40px 0;
     }
 
     .new-section img {
@@ -116,7 +125,7 @@
 
     .new-section-content {
       flex: 1;
-      padding: 0 40px;
+      padding: 40px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -158,12 +167,18 @@
     }
 
     .registration-section {
+      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 40px;
       text-align: center;
-      width: 100%; /* Ensure full width */
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 40px;
     }
 
     .registration-section h1 {
@@ -202,13 +217,11 @@
     }
 
     .banner {
-      width: 100%; /* Ensure full width */
+      width: 100%;
       background-color: #000;
       color: #fff;
       padding: 20px 0;
       text-align: center;
-      position: relative; /* Ensures footer is positioned correctly */
-      bottom: 0;
     }
 
     .banner h2 {
@@ -234,8 +247,6 @@
 </head>
 
 <body>
-  <div class="menu-container"></div>
-  
   <div class="container">
     <div class="section">
       <div class="text-section">
@@ -271,23 +282,15 @@
     <a href="#">Sign In</a>
   </div>
 
-  <!-- Start footer -->
   <div class="banner">
-    <div class="banner-table flex-row">
-      <div class="flex-row">
-        <div class="flex-item-stretch">
-          <h2>LOGITRUST</h2>
-          <p>
-            <a href="#"><i class="fab fa-facebook"></i> Facebook</a><br>
-            <a href="#"><i class="fab fa-twitter"></i> Twitter</a><br>
-            <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
-            Copyright © 2024 - Logitrust
-          </p>
-        </div>
-      </div>
-    </div>
+    <h2>LOGITRUST</h2>
+    <p>
+      <a href="#"><i class="fab fa-facebook"></i> Facebook</a><br>
+      <a href="#"><i class="fab fa-twitter"></i> Twitter</a><br>
+      <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+      Copyright © 2024 - Logitrust
+    </p>
   </div>
-  <!-- End footer -->
 </body>
 
 </html>

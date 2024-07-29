@@ -1,9 +1,10 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
-  <title>LOGISTICS PROJECT</title>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/logo.png">
   <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
@@ -14,110 +15,271 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/footer.js"></script>
+  <title>LOGISTICS PROJECT</title>
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     .menu-index {
       color: rgb(255, 255, 255) !important;
       opacity: 1 !important;
       font-weight: 700 !important;
     }
-    .container {
-      width: 80%;
-      margin: 0 auto;
-      overflow: hidden;
+    .header {
+      width: 100%;
+      background-color: #000000;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .header .contact {
+      text-align: left;
+    }
+
+    .header .contact p {
+      margin: 5px 0;
+    }
+
+    .header .main-content {
+      text-align: center;
+    }
+
+    .header .main-content h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .header .main-content img {
+      width: 150px;
+      margin-top: 20px;
+    }
+
+    .info-section {
+      width: 100%;
+    }
+
+    .info-section .yellow-section {
+      background-color: #f7f7f7;
+      color: #000;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .info-section .yellow-section img {
+      max-width: 100%;
+      height: auto;
+      flex: 1 1 300px;
+    }
+
+    .info-section .yellow-section .text-content {
+      flex: 1 1 300px;
       padding: 20px;
     }
 
-    .features, .gallery {
-      padding: 20px;
-      background: #fff;
-      margin: 20px 0;
-      border-radius: 8px;
-    }
-
-    .features h2, .gallery h2 {
-      margin-top: 0;
-      padding: 20px;
-    }
-
-    .feature-item, .gallery-item {
+    .info-section .yellow-section .text-content h1 {
+      font-size: 2rem;
       margin-bottom: 20px;
     }
 
-    .feature-item img, .gallery-item img {
+    .info-section .yellow-section .text-content p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .info-section .dark-section {
+      background-color: #333;
+      color: #fff;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .info-section .dark-section .text-content {
+      flex: 1 1 300px;
+      padding: 20px;
+    }
+
+    .info-section .dark-section .text-content h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .info-section .dark-section .text-content p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .info-section .dark-section .text-content .btn {
+      padding: 10px 20px;
+      background-color: #f36a22;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .info-section .dark-section .text-content .btn:hover {
+      background-color: #e05d1e;
+    }
+
+    .info-section .dark-section img {
+      max-width: 100%;
+      height: auto;
+      flex: 1 1 300px;
+    }
+
+    .services {
+      display: flex;
+      justify-content: center;
       width: 100%;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .service {
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
+      flex: 1;
+      max-width: 300px;
+    }
+
+    .service img {
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid #f0f0f0;
+      padding-bottom: 20px;
+    }
+
+    .service h3 {
+      color: #0e0603;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .banner {
+      width: 100%;
+      height: 100vh;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .banner h2 {
+      margin: 0;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .banner a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .banner a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
-  <div class="menu-container"></div>
-  <div class="content-container">
-    <!-------------------------------------------------------------------------------------------->
-    <!--Start Header-->
-    <div class="banner" style="background: url('img/dummy-background.jpg') no-repeat center; background-size: cover; height: 300px;"></div>
-    <div class="banner">
-      <div class="banner-table flex-column">
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 class="add-top-margin-small">Welcome to LOGITRUST.</h2>
-            <p class="text">
-               When it comes to urban logistics and transportation of heavy items, we understand the challenges individuals
-               face in finding suitable vehicles for hire. Our platform aims to solve this by providing a centralized solution to connect users 
-               with available transportation options.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--End Header-->
-    <!-------------------------------------------------------------------------------------------->
-    <div class="content">
-      <div class="content-table flex-column">
-        
-        <div class="container">
-          <section class="features">
-            <h2>Features</h2><br>
-            <div class="feature-item">
-              <img src="img/line-up.jpg" alt="Centralized Platform">
-              <h3>Centralized Platform</h3>
-              <p>Browse and compare different types of vehicles available for hire, including trucks, vans, and more.</p>
-            </div>
-            <div class="feature-item">
-              <img src="img/tyre.jpeg" alt="Real-Time Availability">
-              <h3>Real-Time Availability</h3>
-              <p>Check the real-time availability of vehicles in your vicinity to ensure prompt access when needed.</p>
-            </div>
-            <div class="feature-item">
-              <img src="img/tracking.jpg" alt="Transparent Pricing">
-              <h3>Transparent Pricing</h3>
-              <p>Compare rates and choose the most cost-effective option based on your needs and budget.</p>
-            </div>
-          </section>
+  <div class="header">
+    <div class="contact">
+      <p><strong>Ugnada</strong></p>
+      <p>+256 703688121</p>
       
-          
-        </div>
-        <p class = "text">
-          The primary challenge this logistics application aims to address is the inefficiency and inconvenience faced by individuals in urban centers when seeking suitable vehicles for relocating or transporting heavy items. 
+    </div>
+    <div class="main-content">
+      <h1>LOGITRUST</h1>
+      <img src="img/logo.png" alt="Delivery Van">
+    </div>
+  </div>
+
+  <div class="info-section">
+    <div class="yellow-section">
+      <img src="img/tyre.jpeg" alt="Courier">
+      <div class="text-content">
+        <h1>What we believe</h1>
+        <p> The primary challenge this logistics application aims to address is the inefficiency and inconvenience faced by individuals in urban centers when seeking suitable vehicles for relocating or transporting heavy items. 
           Currently, users must navigate a fragmented system of local listings and contact individual vehicle owners or rental services, which can lead to delays, increased costs, and logistical stress. The decentralized nature 
           of vehicle rental services exacerbates these issues, making it difficult for users to quickly and reliably find transportation options that meet their needs, especially during peak periods or urgent situations
         </p>      
-
-
-        
-        <!--Start Credits-->
-        <div class="flex-row">
-          <div class="flex-item flex-item-stretch flex-column">
-            <p class="text text-small text-italic add-top-margin-large">
-              Credits: <span class="highlight-text">CSC-Group14</span>
-            </p>
-          </div>
-        </div>
-        <!--End Credits-->
-        <!-------------------------------------------------------------------------------------------->
+        <h3>Real-Time Availability</h3>
+        <p>Check the real-time availability of vehicles in your vicinity to ensure prompt access when needed.</p>
       </div>
     </div>
-    <div class="footer-container"></div>
+    <div class="dark-section">
+      <div class="text-content">
+        <h1>We Are Available 24/7!</h1>
+        <p>Order Now</p>
+        <a href="widgets.html" class="btn">Order Now</a>
+      </div>
+      <img src="img/dummy-background.jpg" alt="Van">
+    </div>
+  </div>
+
+  <div class="services">
+    <div class="service">
+      <img src="img/Isuzu-NLR-(1-of-3).jpg" alt="Direct Drive">
+      <h3>DIRECT DRIVE</h3>
+      <p>We do not take detours to pick up additional shipments, and we do not store your goods in between.</p>
+    </div>
+    <div class="service">
+      <img src="img/truck-kun.jpg" alt="Delivery Tours">
+      <h3>DELIVERY TOURS</h3>
+      <p>We have extensive expertise and experience in professional delivery transport.</p>
+    </div>
+    <div class="service">
+      <img src="img/line-up.jpg" alt="Permanent Contract">
+      <h3>PERMANENT CONTRACT</h3>
+      <p>We are your powerful partner for courier services under fixed long-term contracts.</p>
+    </div>
+  </div>
+
+  <div class="banner">
+    <h2>LOGITRUST</h2>
+    <p>
+      <a href="#"><i class="fab fa-facebook"></i> Facebook</a><br>
+      <a href="#"><i class="fab fa-twitter"></i> Twitter</a><br>
+      <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+      Copyright © 2024 - Logitrust
+    </p>
   </div>
 </body>
 
