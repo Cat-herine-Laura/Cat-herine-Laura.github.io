@@ -48,7 +48,7 @@
 
     .painting-frame-image {
       width: 100%;
-      height: auto; /* Fixed height for all images */
+      height: 400px; /* Fixed height for all images */
       object-fit: cover; /* Ensures the image covers the box without stretching */
     }
 
@@ -75,12 +75,7 @@
         grid-template-columns: repeat(2, 1fr); 
       }
     }
-    @media (max-width: 500px) {
-      .flex-row {
-        grid-template-columns: 1fr; /* Stack items on top of each other for very small screens */
-      }
-    }
-    
+       
     .container {
       width: 80%;
       max-width: 800px;
